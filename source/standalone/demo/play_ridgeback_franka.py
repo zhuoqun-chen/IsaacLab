@@ -78,7 +78,7 @@ def main():
     """Spawns a mobile manipulator and applies random joint position commands."""
 
     # Load kit helper
-    sim = SimulationContext(physics_dt=0.01, rendering_dt=0.01, backend="torch")
+    sim = SimulationContext(physics_dt=0.01, rendering_dt=0.01, backend="torch", device="cpu")
     # Set main camera
     set_camera_view([1.5, 1.5, 1.5], [0.0, 0.0, 0.0])
     # Spawn things into stage

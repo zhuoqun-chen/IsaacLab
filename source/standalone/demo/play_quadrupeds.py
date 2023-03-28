@@ -88,7 +88,9 @@ def main():
     """Imports all legged robots supported in Orbit and applies zero actions."""
 
     # Load kit helper
-    sim = SimulationContext(stage_units_in_meters=1.0, physics_dt=0.005, rendering_dt=0.005, backend="torch")
+    sim = SimulationContext(
+        stage_units_in_meters=1.0, physics_dt=0.005, rendering_dt=0.005, backend="torch", device="cpu"
+    )
     # Set main camera
     set_camera_view(eye=[3.5, 3.5, 3.5], target=[0.0, 0.0, 0.0])
 

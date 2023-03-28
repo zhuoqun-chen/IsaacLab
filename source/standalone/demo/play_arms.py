@@ -56,7 +56,7 @@ def main():
     """Spawns a single arm manipulator and applies random joint commands."""
 
     # Load kit helper
-    sim = SimulationContext(physics_dt=0.01, rendering_dt=0.01, backend="torch")
+    sim = SimulationContext(physics_dt=0.01, rendering_dt=0.01, backend="torch", device="cpu")
     # Set main camera
     set_camera_view([2.5, 2.5, 2.5], [0.0, 0.0, 0.0])
 

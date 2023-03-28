@@ -106,7 +106,7 @@ def main():
     """Runs a camera sensor from orbit."""
 
     # Load kit helper
-    sim = SimulationContext(physics_dt=0.005, rendering_dt=0.005, backend="torch")
+    sim = SimulationContext(physics_dt=0.005, rendering_dt=0.005, backend="torch", device="cpu")
     # Set main camera
     set_camera_view([2.5, 2.5, 2.5], [0.0, 0.0, 0.0])
     # Acquire draw interface
